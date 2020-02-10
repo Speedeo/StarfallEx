@@ -416,7 +416,8 @@ function ents_methods:getColor()
 		
 	local entColor = ent:GetColor()
 		
-	return cwrap(Color(entColor.r, entColor.g, entColor.b, entColor.a))
+	return cwrap(Color(entColor.r, entColor.g, entColor.b, entColor.a)) -- Added by Speedeo
+	--This will have to be removed when the GetColor bug is fixed
 end
 
 --- Gets the clipping of an entity

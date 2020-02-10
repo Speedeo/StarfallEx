@@ -413,7 +413,10 @@ end
 -- @return Color
 function ents_methods:getColor()
 	local ent = getent(self)
-	return cwrap(ent:GetColor())
+		
+	local entColor = ent:GetColor()
+		
+	return cwrap(Color(entColor.r, entColor.g, entColor.b, entColor.a))
 end
 
 --- Gets the clipping of an entity
